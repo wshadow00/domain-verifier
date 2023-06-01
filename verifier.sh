@@ -14,7 +14,7 @@ if echo $OPTS | grep -i -q -e "\-\-help \|\-h "; then
 else
 
 	if [[ ! -z ${domain_name} ]];then
-		for domain in $(cat $domain_name 2>/dev/null);
+		for domain in $(cat $domain_name);
 		do
 			if [[ ! -z ${company_name} ]] ;then
 				data=`whois $domain`
